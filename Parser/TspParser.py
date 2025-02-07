@@ -72,13 +72,24 @@ class TspParser(ParserInterface):
 
 
     def get_article_writer(self,dom: BeautifulSoup):
+        # TODO the function does not work correctly.
+        # if no author is specified, the description of the article is sometimes entered
+        output = ""
         writer = dom.find(self.__writer_tag,property=self.__writer_tag_property)
         if writer is not None:
-            return writer.contents[0].text
+            output = writer.text
+            print(f"1: {output}")
         elif dom.find("em") is not None:
-            return dom.find("em").contents[0]
+            output = dom.find("em").text
+            print(f"2: {output}")
         else:
-            return  "unknown"
+            output =  "unknown"
+            print(f"3: {output}")
+        # Workaround... because TODO
+        if len(output) > 50:
+            output = "PARSE ERROR"
+        return output
+
 
     def get_article_content( self,dom: BeautifulSoup):
 
