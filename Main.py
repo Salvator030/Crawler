@@ -1,16 +1,18 @@
-from Crawler.CrawlerFactory import CrawlerFactory
-from Crawler.MainCrawler import MainCrawler
-from Crawler.SpiegelCrawler import SpiegelCrawler
-from Crawler.TspCrawler import  TspCrawler
-from Orm.OrmModels import Article
-from Parser import TspParser
-from Orm.OrmHandler import OrmHandlerFactory, ArticleHandler
+from Backend.Crawler import MainCrawler
+from Backend.Orm.OrmModels import Article
+from Backend.Orm.OrmHandler import OrmHandlerFactory, ArticleHandler
+from Backend.controller_threads import CrawlAndPersistArticlesThread
 
+
+def thread_function( stop_event):
+   crawler = MainCrawler()
+   while not stop_event.is_set():
+      crawler.crawl_all_news_papers()
 
 class Main:
    # fetcher =Fetcher()
-   url = "https://www.tagesspiegel.de/internationales/konnte-trump-dorthin-us-straftater-abschieben-so-funktioniert-el-salvadors-brutales-gefangnissystem-13141663.html"
-   s_url = "https://www.spiegel.de/partnerschaft/haushalt-und-arbeitsteilung-maenner-ueberschaetzen-ihren-beitrag-zur-hausarbeit-a-97078671-2a83-46a7-aa52-e5b576664e50"
+   # url = "https://www.tagesspiegel.de/internationales/wir-sind-auf-alle-szenarien-vorbereitet-baltische-staaten-wollen-sich-am-samstag-von-russlands-stromnetz-abkoppeln-13162444.html"
+   # s_url = "https://www.spiegel.de/partnerschaft/haushalt-und-arbeitsteilung-maenner-ueberschaetzen-ihren-beitrag-zur-hausarbeit-a-97078671-2a83-46a7-aa52-e5b576664e50"
 
    # parser = TspParser()
    #
@@ -32,7 +34,7 @@ class Main:
    #    articles = tsp_crawler.crawl_articles()
    #    print(articles)
    #    article_handler.add_articles(articles)
-   #    [print(i) for i in article_handler.get_all_articles()]
+   # [print(i) for i in article_handler.get_all_articles()]
 
 
    # crawler.start()
@@ -48,8 +50,23 @@ class Main:
    # db.insert_Models(en,[a])
    # interactor.search_for_x_posts("https://www.tagesspiegel.de/internationales/bei-besuch-in-damaskus-syriens-machthaber-verweigert-baerbock-den-handschlag-12959740.html")
 
-   crawler = MainCrawler()
-   crawler.crawl_all_news_papers()
+   t = CrawlAndPersistArticlesThread()
+   t.name = "crawl"
+   ts = [t]
+
+   [print(e.name) for e in ts ]
+
+
+   # stop_event = threading.Event()
+   # thread = threading.Thread(target=thread_function, args=(stop_event,))
+   # thread.start()
+   # i =""
+   #
+   # while i != "ja":
+   #    i = input("abbrechen")
+   # stop_event.set()
+   # thread.join()
+   # print("ende")
 
 
 

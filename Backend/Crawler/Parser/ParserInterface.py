@@ -2,7 +2,7 @@ from datetime import datetime
 
 from bs4 import BeautifulSoup
 
-from Orm.OrmModels import Article
+from Backend.Orm.OrmModels import Article
 
 
 class ParserInterface:

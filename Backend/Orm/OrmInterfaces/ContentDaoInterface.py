@@ -1,6 +1,6 @@
-from abc import abstractmethod, abstractproperty
+from abc import abstractmethod
 
-from Orm.OrmModels.Content import Content
+from Backend.Orm.OrmModels.Content import Content
 
 
 class ContentDaoInterface:

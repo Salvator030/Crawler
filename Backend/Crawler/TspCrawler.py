@@ -1,9 +1,8 @@
-from Crawler.CrawlerInterface import CrawlerInterface
-from Fetcher import Fetcher
-from Parser import TspParser
+from Backend.Crawler.CrawlerInterface import CrawlerInterface
+from Backend.Crawler.Fetcher import Fetcher
 
-from Interactor.TspInteractor import TspInteractor
-from Parser.ParserInterface import ParserInterface
+from Backend.Crawler.Interactor.TspInteractor import TspInteractor
+from Backend.Crawler.Parser import ParserInterface
 
 
 class TspCrawler(CrawlerInterface):
@@ -21,7 +20,6 @@ class TspCrawler(CrawlerInterface):
         return articles_urls
 
     def crawl_article(self, url: str):
-        print("url: " + url)
         interactor = TspInteractor()
         article_dom = self.__parser.parse_requests(self.__fetcher.fetch(url))
         article = self.__parser.parse_article(article_dom)

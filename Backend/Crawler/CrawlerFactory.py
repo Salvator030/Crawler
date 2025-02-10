@@ -1,9 +1,10 @@
-from Crawler.CrawlerInterface import CrawlerInterface
-from Crawler.SpiegelCrawler import SpiegelCrawler
-from Crawler.TspCrawler import TspCrawler
-from Fetcher import Fetcher
-from Parser import TspParser
-from Parser.SpiegelParser import SpiegelParser
+from Backend.Crawler.CrawlerInterface import CrawlerInterface
+from Backend.Crawler.Parser.SpiegelParser import SpiegelParser
+from Backend.Crawler.SpiegelCrawler import SpiegelCrawler
+from Backend.Crawler.TspCrawler import TspCrawler
+from Backend.Crawler.Fetcher import Fetcher
+from Backend.Crawler.Parser import TspParser
+
 
 
 class CrawlerFactory:

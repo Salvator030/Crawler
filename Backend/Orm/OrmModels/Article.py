@@ -1,3 +1,4 @@
+import json
 from typing import List
 from sqlalchemy import String, Integer, Text, ForeignKey
 from sqlalchemy.dialects.mysql import DATETIME
@@ -20,6 +21,21 @@ class Article(Base):
     x_posts: Mapped[List["XPostInArticles"]] = relationship(back_populates="article")
 
     def __repr__(self) -> str:
-        return (f"article(id={self.id!r}, data={self.data!r}, headline={self.headline!r}, "
-                f"sub_headline={self.sub_headline!r}, description={self.description!r}, "
-                f"contents={self.contents!r}, writer={self.writer!r}, publisher={self.publisher!r}, url={self.url!r})")
+        return (f"article(id={self.id!r},\ndata={self.data!r},\nheadline={self.headline!r},\n"
+                f"sub_headline={self.sub_headline!r},\ndescription={self.description!r},\n"
+                f"contents={self.contents!r},\nwriter={self.writer!r},\npublisher={self.publisher!r},\nurl={self.url!r})\n")
+
+    def json(self):
+
+        return {"id": self.id,
+                "data": str(self.data),
+                "headline": self.headline,
+                "sub_headline": self.sub_headline,
+                "description": self.description,
+                "last_content": self.contents[-1].text,
+                "updates": len(self.contents) - 1,
+                "writer": self.writer,
+                "publisher": self.publisher,
+                "url": self.url
+                }
+

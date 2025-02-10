@@ -1,12 +1,9 @@
-from bs4 import BeautifulSoup, NavigableString, PageElement
+from bs4 import BeautifulSoup, NavigableString
 from datetime import datetime
 
-from django.template.defaultfilters import first
-from django.utils.lorem_ipsum import paragraphs
-
-from Parser.ParserInterface import ParserInterface
-from Orm.OrmModels.Article import Article
-from Orm.OrmModels.Content import Content
+from Backend.Crawler.Parser.ParserInterface import ParserInterface
+from Backend.Orm.OrmModels.Article import Article
+from Backend.Orm.OrmModels.Content import Content
 
 
 class TspParser(ParserInterface):

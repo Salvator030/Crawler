@@ -7,7 +7,6 @@ class Fetcher:
         pass
 
     def fetch(self,url):
-        print(url)
         res = None
         try:
             res = requests.get(url)

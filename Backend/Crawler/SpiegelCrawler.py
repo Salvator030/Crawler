@@ -1,10 +1,8 @@
-from datetime import datetime
-
-from Crawler.CrawlerInterface import CrawlerInterface
-from Fetcher import Fetcher
-from Interactor.TspInteractor import TspInteractor
-from Orm.OrmModels import Article
-from Parser.ParserInterface import ParserInterface
+from Backend.Crawler.CrawlerInterface import CrawlerInterface
+from Backend.Crawler.Fetcher import Fetcher
+from Backend.Crawler.Interactor.TspInteractor import TspInteractor
+from Backend.Orm.OrmModels import Article
+from Backend.Crawler.Parser import ParserInterface
 
 
 class SpiegelCrawler(CrawlerInterface):

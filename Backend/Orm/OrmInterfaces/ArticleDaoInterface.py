@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from Orm.OrmModels import Article
+from Backend.Orm.OrmModels import Article
 
 
 class ArticleDaoInterface:

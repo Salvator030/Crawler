@@ -1,7 +1,7 @@
 from abc import abstractmethod
 
-from Fetcher import Fetcher
-from Parser import ParserInterface
+from Backend.Crawler.Fetcher import Fetcher
+from Backend.Crawler.Parser import ParserInterface
 
 
 class CrawlerInterface:

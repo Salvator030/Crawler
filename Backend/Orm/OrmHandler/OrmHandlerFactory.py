@@ -1,7 +1,6 @@
-from Crawler.CrawlerInterface import CrawlerInterface
-from Database import Database, DatabaseOption
-from Orm.OrmHandler.ArticleHandler import ArticleHandler
-from Orm.OrmModels import Article, Base
+from Backend.Database import Database, DatabaseOption
+from Backend.Orm.OrmHandler.ArticleHandler import ArticleHandler
+from Backend.Orm.OrmModels import Article, Base
 
 
 class OrmHandlerFactory:

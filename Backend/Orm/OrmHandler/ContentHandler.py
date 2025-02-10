@@ -1,9 +1,9 @@
 from sqlalchemy import Engine, select
 from sqlalchemy.orm import Session
 
-from Database import Database
-from Orm.OrmInterfaces.ContentDaoInterface import ContentDaoInterface
-from Orm.OrmModels.Content import Content
+from Backend.Database import Database
+from Backend.Orm.OrmInterfaces.ContentDaoInterface import ContentDaoInterface
+from Backend.Orm.OrmModels.Content import Content
 
 
 class ContentHandler(ContentDaoInterface):

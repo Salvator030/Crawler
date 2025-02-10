@@ -1,13 +1,11 @@
 from datetime import datetime
-from warnings import catch_warnings
 
-from django.db.models.fields import return_None
-from sqlalchemy import Engine, select, Executable, Result
-from sqlalchemy.orm import Session, joinedload
+from sqlalchemy import Engine, select
+from sqlalchemy.orm import Session
 
-from Database import Database
-from Orm.OrmInterfaces.ArticleDaoInterface import ArticleDaoInterface
-from Orm.OrmModels import Article, Content
+from Backend.Database import Database
+from Backend.Orm.OrmInterfaces.ArticleDaoInterface import ArticleDaoInterface
+from Backend.Orm.OrmModels import Article, Content
 
 from sqlalchemy.orm import joinedload
 
@@ -16,22 +14,14 @@ class ArticleHandler(ArticleDaoInterface):
         self.__database: Database = database
         self.__engine: Engine = database.engin
 
-    from datetime import datetime
-
-    from datetime import datetime
-
-    from datetime import datetime
-
     def add_articles(self, articles: list[Article]):
-        print(f"add_articles")
         with Session(self.__engine) as session:
 
                 for article in articles:
                     # check if article in database
-                    print(article)
                     stm = select(Article).where(Article.headline == article.headline)
                     result = session.scalars(stm).first()
-                    print("res " + str(result))
+
                     if result is None:
                         # if not add article
 
@@ -40,10 +30,6 @@ class ArticleHandler(ArticleDaoInterface):
                         # Ensure the current_date and new_date are actual datetime objects
                         current_date = result.data
                         new_date = article.data
-
-                        # Print the values to verify
-                        print(f"Current date: {current_date} (Type: {type(current_date)})")
-                        print(f"New date: {new_date} (Type: {type(new_date)})")
 
                         # Convert to datetime objects if necessary
                         if isinstance(current_date, datetime) and isinstance(new_date, datetime):

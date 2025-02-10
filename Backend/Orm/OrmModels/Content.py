@@ -13,4 +13,4 @@ class Content(Base):
     date: Mapped[DATETIME] = mapped_column(DATETIME,nullable=False)
 
     def __repr__(self) -> str:
-        return f"content(id={self.id!r}, article_id={self.article_id!r}, text={self.text!r}, article={self.article!r})"
+        return f"content(id={self.id!r},\narticle_id={self.article_id!r},\ntext={self.text!r},\narticle={self.article!r})"

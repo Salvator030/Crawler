@@ -1,11 +1,9 @@
 from datetime import datetime
 
-from bs4 import BeautifulSoup, NavigableString, PageElement
-from django.utils.lorem_ipsum import paragraphs
-from sqlalchemy import false
+from bs4 import BeautifulSoup, NavigableString
 
-from Orm.OrmModels import Article, Content
-from Parser.ParserInterface import ParserInterface
+from Backend.Orm.OrmModels import Article, Content
+from Backend.Crawler.Parser.ParserInterface import ParserInterface
 
 
 
