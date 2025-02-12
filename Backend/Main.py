@@ -1,7 +1,5 @@
 from Backend.Crawler import MainCrawler
-from Backend.Orm.OrmModels import Article
-from Backend.Orm.OrmHandler import OrmHandlerFactory, ArticleHandler
-from Backend.controller_threads import CrawlAndPersistArticlesThread
+from Backend.Controller.controller_threads import CrawlAndPersistArticlesThread
 
 
 def thread_function( stop_event):

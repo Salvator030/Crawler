@@ -1,6 +1,5 @@
-from flask import Flask
 from . import app
-from .controller import Controller
+from Backend.Controller.Controller import Controller
 
 controller = Controller()
 
@@ -19,4 +18,8 @@ def start_crawler():
 @app.route("/stop_crawler")
 def stop_crawler():
     return controller.stop_crawler()
+
+@app.route("/crawler_status")
+def crawler_status():
+    return controller.crawler_status()
 
