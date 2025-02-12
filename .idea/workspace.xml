@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3080fb96-fcb9-4362-93ab-bd9f1785cb06" name="Changes" comment="implement first endpoints in backend.">
+      <change afterPath="$PROJECT_DIR$/Backend/Controller/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Crawler/Parser/TspParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Crawler/Parser/TspParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Crawler/TspCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Crawler/TspCrawler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Controller/Controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controller_options.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Controller/controller_options.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controller_threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Controller/controller_threads.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="init" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Salvator030&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Salvator030/Data_Crawler&quot;,
+    &quot;accountId&quot;: &quot;73e70a4d-b154-48e5-9a9f-ae3f0052110c&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2quadmU0pzvrxNF62QLLqxwpyA5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Article.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ArticleHandler.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Content.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Crawler.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Database.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Fetcher.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Parser.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SpiegelCrawler.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SpiegelParser.executor&quot;: &quot;Run&quot;,
+    &quot;Python.T.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TspCrawler.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TspInteractor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TspParser.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Tsp_Parser.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clsregistry.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.controller.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dotenv.executor&quot;: &quot;Run&quot;,
+    &quot;Python.routes.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.run.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ich/dev/repositorys/PythonProject/Data_Crawler&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Database" />
+      <recent name="$PROJECT_DIR$/Crawler/Articles" />
+      <recent name="$PROJECT_DIR$/.venv/bin" />
+      <recent name="$PROJECT_DIR$/Crawler" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Backend" />
+      <recent name="$PROJECT_DIR$/Backend/Controller" />
+      <recent name="$PROJECT_DIR$/Crawler" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Orm" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dotenv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Data_Crawler" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (Data_Crawler)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.venv/bin" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/bin/dotenv" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.dotenv" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-1b1018131e27-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3080fb96-fcb9-4362-93ab-bd9f1785cb06" name="Changes" comment="" />
+      <created>1735515004111</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735515004111</updated>
+    </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1738880910344</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738880910344</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1738881169988</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738881169988</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1738881412348</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738881412348</updated>
+    </task>
+    <task id="LOCAL-00004" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1738881918955</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738881918955</updated>
+    </task>
+    <task id="LOCAL-00005" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1738890482294</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738890482294</updated>
+    </task>
+    <task id="LOCAL-00006" summary="implement first endpoints in backend.">
+      <option name="closed" value="true" />
+      <created>1739151849396</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739151849396</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="init commit" />
+    <MESSAGE value="implement first endpoints in backend." />
+    <option name="LAST_COMMIT_MESSAGE" value="implement first endpoints in backend." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Backend/Crawler/SpiegelCrawler.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
