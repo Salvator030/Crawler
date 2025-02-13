@@ -1,5 +1,5 @@
 <section class="container">
-    <h3>crawler-server-status!</h3>
+    <h3>crawler-server-status</h3>
     <p>Crawler: {{status}}</p>
-    <app-start-server-btn [isCrawled]="isCrawled" ></app-start-server-btn>
+    <app-start-server-btn [isCrawled]="isCrawled" (isCrawledChange)="updateStatus($event)"></app-start-server-btn>
 </section>

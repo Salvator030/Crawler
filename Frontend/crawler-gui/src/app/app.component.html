@@ -1,13 +1,15 @@
+<app-resize-listener></app-resize-listener>
+<main>
+<header>
+  <app-header></app-header>
+</header>
+<body>
+
+  <app-crawler-server-status *ngIf="currentView === 'home'"></app-crawler-server-status>
+  <app-articles *ngIf="currentView === 'articles'"></app-articles>
 
 
 
-
-<section class="container">
-  <h1>MAin</h1>
-  <app-crawler-server-status></app-crawler-server-status>
-
-</section>
-
-
-
+</body>
+<main>
 

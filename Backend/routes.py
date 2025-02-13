@@ -7,10 +7,6 @@ controller = Controller()
 def is_server_run():
     return "Data-Crawler-Server is run"
 
-@app.route("/get_all")
-def get_all():
-    return controller.get_all()
-
 @app.route("/start_crawler")
 def start_crawler():
     return controller.start_crawler()
@@ -23,3 +19,6 @@ def stop_crawler():
 def crawler_status():
     return controller.crawler_status()
 
+@app.route("/all_articles")
+def all_articles():
+    return controller.all_articles()

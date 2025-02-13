@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CrawlerServerStatusService } from '../crawler-server-status.service';
 import { CrawlrBtnService } from './start-crawlr-btn.service';
@@ -16,6 +16,9 @@ export class StartServerBtnComponent implements OnInit {
   @Input()
   isCrawled!: boolean;
   
+  @Output()
+  isCrawledChange = new EventEmitter<boolean>
+  
   btnText: string = ""
   restMsg: string = ""
   isDisabled: boolean = true;  // Statusvariable für den Button
@@ -28,10 +31,12 @@ export class StartServerBtnComponent implements OnInit {
         next: (response: any) => {
           if (response.msg == -1 ){
             this.restMsg = "crawler is not started"
+             this.isCrawled = false;
+             this.isCrawledChange.emit(this.isCrawled);
           }
           else if(response.msg == 1){
-              this.restMsg = "crawler is started";
               this.isCrawled = true;
+              this.isCrawledChange.emit(this.isCrawled);
               this.btnText = "stop"
           }
         }
@@ -56,7 +61,7 @@ export class StartServerBtnComponent implements OnInit {
     this.isDisabled = false;
    }
    else{
-    this.btnText = "start";
+    this.btnText = "stop";
     this.isDisabled = false;
    }
 
@@ -67,6 +72,8 @@ export class StartServerBtnComponent implements OnInit {
       this.btnText = "start"
       this.isDisabled = false; 
       this.restMsg = "" // Setze die Statusvariable zurück
+      this.isCrawled = false
+      this.isCrawledChange.emit(this.isCrawled);
     });
   }
 }

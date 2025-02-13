@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3080fb96-fcb9-4362-93ab-bd9f1785cb06" name="Changes" comment="implement first endpoints in backend.">
-      <change afterPath="$PROJECT_DIR$/Backend/Controller/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backend/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Crawler/Parser/TspParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Crawler/Parser/TspParser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Crawler/TspCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Crawler/TspCrawler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Controller/Controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controller_options.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Controller/controller_options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controller_threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Controller/controller_threads.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Controller/Controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Controller/Controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-server-btn.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-server-btn.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

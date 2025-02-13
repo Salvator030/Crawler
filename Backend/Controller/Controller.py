@@ -24,9 +24,8 @@ class Controller:
             thread.name = "CrawlAndPersistArticlesThread"
             thread.start()
             self.__threads["CrawlAndPersistArticlesThread"] = thread
-            msg = 1
             if thread.is_alive():
-                msg = 2
+                msg = 1
             else:
                 msg = -1
         else:
@@ -57,9 +56,9 @@ class Controller:
         print("Sending 'crawler_stopped' event")  # Füge einen Debug-Print hinzu
         socketio.emit('crawler_stopped', {'msg': 1})
 
-    def get_all(self) -> str:
+    def all_articles(self) -> str:
         articles = self.__article_handler.get_all_articles()
-        json_objects = [article.json() for article in articles]
+        json_objects = {"msg": [article.json() for article in articles] }
         return json.dumps(json_objects, indent= 4)
 
     def crawler_status(self) -> str:
@@ -68,3 +67,4 @@ class Controller:
             msg = 1
         json_objects = {"msg": msg}
         return json.dumps(json_objects, indent=4)
+
