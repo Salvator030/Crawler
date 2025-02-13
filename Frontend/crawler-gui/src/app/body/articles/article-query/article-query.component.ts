@@ -63,6 +63,7 @@ export class ArticleQueryComponent {
     const selectedPublishers = this.publishers.filter(publisher => publisher.checked);
     const publischersName = selectedPublishers.map(publisher => publisher.name);
     const json = {publisher: publischersName, date: this.date}
+    console.log(this.date)
     return json
   }
 

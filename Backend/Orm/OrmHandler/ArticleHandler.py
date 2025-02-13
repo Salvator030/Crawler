@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import Engine, select, or_
+from sqlalchemy import Engine, select, or_, Date, cast
 from sqlalchemy.orm import Session
 
 from Backend.Database import Database
@@ -8,6 +8,7 @@ from Backend.Orm.OrmInterfaces.ArticleDaoInterface import ArticleDaoInterface
 from Backend.Orm.OrmModels import Article, Content
 
 from sqlalchemy.orm import joinedload
+from datetime import datetime
 
 class ArticleHandler(ArticleDaoInterface):
     def __init__(self, database: Database):
@@ -54,17 +55,26 @@ class ArticleHandler(ArticleDaoInterface):
 
     def get_article_by(self,json):
         publishers = [string.upper() for string in json["publisher"] ]
+
+
         stm = None
         result = None
-        if len(publishers) > 0:
-            stm = select(Article).options(joinedload(Article.contents).joinedload(Content.article)).where(Article.publisher.in_(publishers) )
+        if json['date'] != "":
+            date = datetime.strptime(json['date'], '%Y-%m-%d')
+            if len(publishers) > 0:
+                stm = select(Article).options(joinedload(Article.contents).joinedload(Content.article)).where(
+                    Article.publisher.in_(publishers), cast(Article.data, Date) == date)
+            else:
+                stm = select(Article).options(joinedload(Article.contents).joinedload(Content.article)).where(
+                    cast(Article.data, Date) == date)
 
         else:
-            stm = select(Article).options(joinedload(Article.contents).joinedload(Content.article)).where(
-            Article.data == (json["date"]))
+            stm = select(Article).options(joinedload(Article.contents).joinedload(Content.article)).where(Article.publisher.in_(publishers))
 
         with Session(self.__engine) as session:
-            return session.scalars(stm).unique().all()
+            res = session.scalars(stm).unique().all()
+            print(len(res))
+            return res
 
 
     def get_article_by_id(self, search_id: int):
