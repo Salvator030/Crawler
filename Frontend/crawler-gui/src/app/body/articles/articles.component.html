@@ -1,8 +1,9 @@
+
+<div *ngIf="articles.length > 0"><button (click)="handelOnClickNewSeachBtn()">new search</button></div>
 <div class="container">
-    <app-article-query *ngIf="articles.length == 0">
-      
-
-
+    
+    <app-article-query  (newArticles)="updateArticles($event)"*ngIf="articles.length == 0">
     </app-article-query>
+    
     <app-article-item *ngFor="let article of articles" [obj]="article" class="container"></app-article-item>
 </div>

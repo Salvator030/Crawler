@@ -1,12 +1,15 @@
-<div>
+<section><div >
     <h4>Publisher</h4>
-    <label for="tsp">Tages-Spiegel</label>
-    <input name="tsp" type="checkbox" [(ngModel)]="checkTsp"/>
-    <label for="tsp">Spiegel</label>
-    <input name="tsp" type="checkbox" [(ngModel)]="checkSpiegel"/>
-
-    <h4>Date</h4>
+    <div *ngFor="let publisher of publishers">
+        <label>
+          <input type="checkbox" [(ngModel)]="publisher.checked"> {{ publisher.name }}
+        </label>
+      </div>
     
-    <input name="date" type="date" />
+  <h4>Date</h4>
+    <input name="date"type="date"[(ngModel)]="date" />
+    <button (click)="submit()">Get Articles</button>
 
 </div>
+  <h4 *ngIf="isResultEmpty">No Result</h4>
+</section>

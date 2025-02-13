@@ -68,3 +68,11 @@ class Controller:
         json_objects = {"msg": msg}
         return json.dumps(json_objects, indent=4)
 
+    def articles_by(self,json_data) -> str:
+
+        result = self.__article_handler.get_article_by(json_data)
+        json_obj = {"msg": 0}
+        print(result)
+        if len(result)> 0 :
+            json_obj = {"msg": [article.json() for article in result]}
+        return json.dumps(json_obj, indent=4)

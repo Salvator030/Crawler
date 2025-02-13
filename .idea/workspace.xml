@@ -4,32 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3080fb96-fcb9-4362-93ab-bd9f1785cb06" name="Changes" comment="implement some views">
+    <list default="true" id="3080fb96-fcb9-4362-93ab-bd9f1785cb06" name="Changes" comment="get view to search article by publisher or date WIP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/article-item/article-item.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/article-item/article-item.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/article-item/article-item.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/article-item/article-item.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/articles.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/articles.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/articles.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/articles.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/articles.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/articles.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-crawlr-btn.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-crawlr-btn.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-server-btn.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-server-btn.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-server-btn.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-server-btn.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Controller/Controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Controller/Controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Orm/OrmHandler/ArticleHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Orm/OrmHandler/ArticleHandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/body/articles/article-query/article-query.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/body/articles/article-query/article-query.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/body/articles/article-query/article-query.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/body/articles/article-query/article-query.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/body/articles/articles.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/body/articles/articles.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/body/articles/articles.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/body/articles/articles.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/body/articles/articles.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/body/articles/articles.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739408956804</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="implement first article selector view">
+      <option name="closed" value="true" />
+      <created>1739411113844</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1739411113844</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -236,7 +229,9 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="implement first endpoints in backend." />
     <MESSAGE value="implement some views" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement some views" />
+    <MESSAGE value="implement first article selector view" />
+    <MESSAGE value="get view to search article by publisher or date WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="get view to search article by publisher or date WIP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

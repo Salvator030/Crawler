@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import Engine, select
+from sqlalchemy import Engine, select, or_
 from sqlalchemy.orm import Session
 
 from Backend.Database import Database
@@ -50,6 +50,22 @@ class ArticleHandler(ArticleDaoInterface):
         with Session(self.__engine) as session:
             stm = select(Article).options(joinedload(Article.contents).joinedload(Content.article)).order_by(Article.id)
             return session.scalars(stm).unique().all()
+
+
+    def get_article_by(self,json):
+        publishers = [string.upper() for string in json["publisher"] ]
+        stm = None
+        result = None
+        if len(publishers) > 0:
+            stm = select(Article).options(joinedload(Article.contents).joinedload(Content.article)).where(Article.publisher.in_(publishers) )
+
+        else:
+            stm = select(Article).options(joinedload(Article.contents).joinedload(Content.article)).where(
+            Article.data == (json["date"]))
+
+        with Session(self.__engine) as session:
+            return session.scalars(stm).unique().all()
+
 
     def get_article_by_id(self, search_id: int):
         with Session(self.__engine) as session:

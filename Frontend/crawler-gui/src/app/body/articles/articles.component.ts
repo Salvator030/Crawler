@@ -15,15 +15,14 @@ export class ArticlesComponent {
 
   articles: [] = []
 
-  constructor(private articlesService: ArticlesService){}
+  constructor(){}
 
-  ngOnInit(){
-  /*  this.articlesService.getAllArticles().subscribe({
-      next: (response: any) => {
-        this.articles = response.msg
-        console.log(this.articles)
-      }
-    }) */
-  } 
+  
+  updateArticles(articles: []){
+    this.articles = articles}
+
+    handelOnClickNewSeachBtn(){
+      this.articles = []
+    }  
 
 }
