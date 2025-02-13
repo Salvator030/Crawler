@@ -4,18 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3080fb96-fcb9-4362-93ab-bd9f1785cb06" name="Changes" comment="implement first endpoints in backend.">
+    <list default="true" id="3080fb96-fcb9-4362-93ab-bd9f1785cb06" name="Changes" comment="implement some views">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Controller/Controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Controller/Controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-server-btn.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-server-btn.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/article-item/article-item.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/article-item/article-item.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/article-item/article-item.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/article-item/article-item.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/articles.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/articles.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/articles.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/articles.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/articles.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/articles/articles.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/crawler-server-status.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-crawlr-btn.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-crawlr-btn.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-server-btn.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-server-btn.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-server-btn.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/crawler-server-status/start-server-btn/start-server-btn.component.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,14 +220,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739151849396</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="implement some views">
+      <option name="closed" value="true" />
+      <created>1739408956804</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739408956804</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="init commit" />
     <MESSAGE value="implement first endpoints in backend." />
-    <option name="LAST_COMMIT_MESSAGE" value="implement first endpoints in backend." />
+    <MESSAGE value="implement some views" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement some views" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

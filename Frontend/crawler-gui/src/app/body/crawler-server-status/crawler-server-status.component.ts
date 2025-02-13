@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CrawlerServerStatusService } from './crawler-server-status.service';
 import { StartServerBtnComponent } from './start-server-btn/start-server-btn.component';
-import { SocketService } from '../app-socket.service';
+import { SocketService } from '../../app-socket.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

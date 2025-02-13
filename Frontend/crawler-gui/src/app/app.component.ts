@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CrawlerServerStatusComponent } from './crawler-server-status/crawler-server-status.component';
-import { StartServerBtnComponent } from './crawler-server-status/start-server-btn/start-server-btn.component';
+import { CrawlerServerStatusComponent } from './body/crawler-server-status/crawler-server-status.component';
+import { StartServerBtnComponent } from './body/crawler-server-status/start-server-btn/start-server-btn.component';
 import { HeaderComponent } from './header/header.component';
 import { ApViewService } from './ap-view.service';
 import { CommonModule } from '@angular/common';
-import { ArticlesComponent } from './articles/articles.component';
+import { ArticlesComponent } from './body/articles/articles.component';
 import { ResizeListenerComponent } from './resize-listener/resize-listener.component';
 
 @Component({

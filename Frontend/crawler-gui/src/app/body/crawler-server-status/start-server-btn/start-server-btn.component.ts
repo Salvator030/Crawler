@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CrawlerServerStatusService } from '../crawler-server-status.service';
 import { CrawlrBtnService } from './start-crawlr-btn.service';
-import { SocketService } from '../../app-socket.service';
+import { SocketService } from '../../../app-socket.service';
 
 @Component({
   standalone: true,
