@@ -5,10 +5,14 @@ from sqlalchemy.orm import Session
 
 from Backend.Database import Database
 from Backend.Orm.OrmInterfaces.ArticleDaoInterface import ArticleDaoInterface
-from Backend.Orm.OrmModels import Article, Content
 
 from sqlalchemy.orm import joinedload
 from datetime import datetime
+
+from Backend.Orm.OrmModels.Content import Content
+from Backend.Orm.OrmModels.Article import Article
+
+
 
 class ArticleHandler(ArticleDaoInterface):
     def __init__(self, database: Database):
@@ -17,35 +21,46 @@ class ArticleHandler(ArticleDaoInterface):
 
     def add_articles(self, articles: list[Article]):
         with Session(self.__engine) as session:
+            for article in articles:
+                if article is None:
+                    print("Received None article")
+                    continue
 
-                for article in articles:
-                    # check if article in database
-                    stm = select(Article).where(Article.headline == article.headline)
-                    result = session.scalars(stm).first()
+                # Debugging-Log
+                print(f"Processing article: {article.headline}")
+                print(f"Article object: {article}")
 
-                    if result is None:
-                        # if not add article
+                # Check if article in database
+                stm = select(Article).where(Article.headline == article.headline)
+                result = session.scalars(stm).first()
 
+                if result is None:
+                    # If not, add article
+                    try:
                         session.add(article)
-                    else:
-                        # Ensure the current_date and new_date are actual datetime objects
-                        current_date = result.data
-                        new_date = article.data
+                        print(f"Added article: {article.headline}")
+                    except Exception as e:
+                        print(f"Failed to add article: {e}")
+                else:
+                    # Ensure the current_date and new_date are actual datetime objects
+                    current_date = result.data
+                    new_date = article.data
 
-                        # Convert to datetime objects if necessary
-                        if isinstance(current_date, datetime) and isinstance(new_date, datetime):
-                            # Convert to offset-naive datetime if necessary
-                            if current_date.tzinfo is not None:
-                                current_date = current_date.replace(tzinfo=None)
-                            if new_date.tzinfo is not None:
-                                new_date = new_date.replace(tzinfo=None)
+                    # Convert to datetime objects if necessary
+                    if isinstance(current_date, datetime) and isinstance(new_date, datetime):
+                        # Convert to offset-naive datetime if necessary
+                        if current_date.tzinfo is not None:
+                            current_date = current_date.replace(tzinfo=None)
+                        if new_date.tzinfo is not None:
+                            new_date = new_date.replace(tzinfo=None)
 
-                            # if article in database and date < crawled article.date update database
-                            if current_date < new_date:
-                                result.contents.append(article.contents[0])
-                                result.data = new_date
-                session.commit()
-
+                        # If article in database and date < crawled article.date, update database
+                        if current_date < new_date:
+                            result.contents.append(article.contents[0])
+                            result.data = new_date
+                            print(f"Updated article: {article.headline}")
+            session.commit()
+            print("Commit completed")
 
     def get_all_articles(self):
         with Session(self.__engine) as session:

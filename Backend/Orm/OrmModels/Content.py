@@ -1,6 +1,7 @@
 from sqlalchemy import Integer, ForeignKey, Text
 from sqlalchemy.dialects.mysql import DATETIME
 from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 from .Base import Base
 
 class Content(Base):

@@ -5,7 +5,7 @@ from Backend.Crawler.CrawlerInterface import CrawlerInterface
 from Backend.Crawler.SpiegelCrawler import SpiegelCrawler
 from Backend.Crawler.TspCrawler import TspCrawler
 from Backend.Orm.OrmHandler import OrmHandlerFactory
-from Backend.Orm.OrmModels import Article
+from Backend.Orm.OrmModels.Article import Article
 
 
 class MainCrawler:

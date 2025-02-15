@@ -109,7 +109,7 @@ class TspParser(ParserInterface):
             p_list = story_elements.find_all("p")
 
             for line in p_list:
-                for element in line.contents:
+
 
                     if len(line.contents) == 1:
                         lines.append(line.contents[0])
@@ -121,9 +121,10 @@ class TspParser(ParserInterface):
                                 lines.append(content.text)
 
             text = ""
+
             for e in lines:
                 text += str(e)
-
+            print(text)
             content = Content(text=text)
             return content
         except* Exception as e:
@@ -144,6 +145,7 @@ class TspParser(ParserInterface):
             temp_article =  Article(data=date,headline= header[0], sub_headline = header[1],  description = header[2], writer= writer,publisher= publisher)
             temp_article.contents.append(content)
             article = temp_article
+            print(f"Parsed article: {article}")
         except*Exception as e:
             print(f"TspParser.parse_article() ERROR")
             print(e.exceptions)

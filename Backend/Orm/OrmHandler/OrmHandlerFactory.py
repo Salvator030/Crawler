@@ -1,6 +1,7 @@
 from Backend.Database import Database, DatabaseOption
 from Backend.Orm.OrmHandler.ArticleHandler import ArticleHandler
-from Backend.Orm.OrmModels import Article, Base
+from Backend.Orm.OrmModels.Article import Article
+from Backend.Orm.OrmModels.Base import Base
 
 
 class OrmHandlerFactory:

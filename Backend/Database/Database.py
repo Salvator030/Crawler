@@ -2,7 +2,8 @@ from sqlalchemy import create_engine, select
 from sqlalchemy.orm import Session
 
 from . import DatabaseOption
-from Backend.Orm.OrmModels import Base, Article
+from Backend.Orm.OrmModels.Base import Base
+from Backend.Orm.OrmModels.Article import Article
 
 
 class Database:
@@ -18,19 +19,4 @@ class Database:
         Base.metadata.create_all(bind=engine)
         return engine
 
-    def add(self,models: [Base]):
-        with Session(self.engin) as session:
-            session.add_all(models)
-            session.commit()
-
-
-    def get_all(self, model_class: type[Base]):
-        with Session(self.engin) as session:
-            stm= select(model_class).order_by(Article.id)
-            return session.scalars(stm).all()
-
-    def get_all_by(self,model_class: type[Base], identifier: str ):
-        with Session(self.engin) as session:
-            stm= select(model_class).order_by(Article.id)
-            return session.scalars(stm).all()
 

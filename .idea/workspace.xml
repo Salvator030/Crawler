@@ -6,8 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="3080fb96-fcb9-4362-93ab-bd9f1785cb06" name="Changes" comment="get view to search article by publisher or date WIP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Controller/Controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Controller/Controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Controller/controller_threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Controller/controller_threads.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Crawler/MainCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Crawler/MainCrawler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Crawler/Parser/SpiegelParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Crawler/Parser/SpiegelParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Crawler/Parser/TspParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Crawler/Parser/TspParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Crawler/TspCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Crawler/TspCrawler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Database/Database.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Database/Database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Orm/OrmHandler/ArticleHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Orm/OrmHandler/ArticleHandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/body/articles/article-query/article-query.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/crawler-gui/src/app/body/articles/article-query/article-query.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Orm/OrmHandler/OrmHandlerFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Orm/OrmHandler/OrmHandlerFactory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Orm/OrmModels/Content.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Orm/OrmModels/Content.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Orm/OrmModels/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Orm/OrmModels/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +50,12 @@
     &quot;assignee&quot;: &quot;Salvator030&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Salvator030/Data_Crawler",
-    "accountId": "fa5a24fe-40e0-490a-9ae5-02a3d5a56ce7"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Salvator030/Data_Crawler&quot;,
+    &quot;accountId&quot;: &quot;fa5a24fe-40e0-490a-9ae5-02a3d5a56ce7&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -241,6 +250,10 @@
           <url>file://$PROJECT_DIR$/Backend/Crawler/SpiegelCrawler.py</url>
           <line>37</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Backend/Orm/OrmHandler/OrmHandlerFactory.py</url>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -2,7 +2,8 @@ from datetime import datetime
 
 from bs4 import BeautifulSoup, NavigableString
 
-from Backend.Orm.OrmModels import Article, Content
+from Backend.Orm.OrmModels.Content import Content
+from Backend.Orm.OrmModels.Article import Article
 from Backend.Crawler.Parser.ParserInterface import ParserInterface
 
 

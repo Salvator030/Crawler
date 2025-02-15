@@ -3,7 +3,7 @@ from threading import Thread
 
 from Backend.Crawler.MainCrawler import MainCrawler
 from Backend.Orm.OrmHandler import ArticleHandler, OrmHandlerFactory
-from Backend.Orm.OrmModels import Article
+from Backend.Orm.OrmModels.Article import Article
 
 
 class CrawlAndPersistArticlesThread(Thread):
@@ -16,11 +16,12 @@ class CrawlAndPersistArticlesThread(Thread):
     def run(self):
         while not self._stop_event.is_set():
             for crawler in self.__main_crawler.crawlers.values():
-                articles: [Article] = crawler.crawl_articles()
+                articles: list[Article] = crawler.crawl_articles()
+                if articles:
+                    print(f"Articles to add: {articles}")
                 self.__article_handler.add_articles(articles)
                 if self._stop_event.is_set():
                     break
-
 
     def stop(self):
         self._stop_event.set()

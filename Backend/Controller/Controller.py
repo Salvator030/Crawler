@@ -3,7 +3,7 @@ from threading import Thread
 
 from Backend import socketio
 from Backend.Orm.OrmHandler import OrmHandlerFactory
-from Backend.Orm.OrmModels import Article
+from Backend.Orm.OrmModels.Article import Article
 
 from flask_socketio import SocketIO, emit
 

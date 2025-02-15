@@ -3,7 +3,7 @@ from Backend.Crawler.Fetcher import Fetcher
 
 from Backend.Crawler.Interactor.TspInteractor import TspInteractor
 from Backend.Crawler.Parser import ParserInterface
-from Backend.Orm.OrmModels import Article
+from Backend.Orm.OrmModels.Article import Article
 
 
 class TspCrawler(CrawlerInterface):
@@ -29,14 +29,15 @@ class TspCrawler(CrawlerInterface):
             article.x_posts = [] #interactor.search_for_x_posts(url)
         return article
 
-    def crawl_articles(self):
-
+    def crawl_articles(self) -> list[Article]:
         articles_urls = self.__crawl_main_page()
-        articles = [Article]
+        articles = []  # Leere Liste von Artikel-Instanzen
         for url in articles_urls:
             article = self.crawl_article(url)
             if article is not None:
-                articles.append(article)
+                articles.append(article)  # Füge Artikel zur Liste hinzu
+                print(f"Crawled article: {article}")
+                print(f"Article headline: {article.headline}")
         return articles
 
 
